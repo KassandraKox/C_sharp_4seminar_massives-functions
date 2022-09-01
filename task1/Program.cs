@@ -12,4 +12,4 @@ while (i < B)
     product *= A;
     i++;
 }
-Console.WriteLine("Число " + A + " в степени " + B + " равно " + product);
+Console.WriteLine("Число " + A + " в степени " + B + " равно " + product + ".");
