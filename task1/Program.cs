@@ -5,7 +5,11 @@ Console.WriteLine("Введите число А:");
 int A = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число B:");
 int B = Convert.ToInt32(Console.ReadLine());
-for (int i = 0; i < B; i++);
+int i = 0;
+int product = 1;
+while (i < B)
 {
-    int count = A;
+    product *= A;
+    i++;
 }
+Console.WriteLine("Число " + A + " в степени " + B + " равно " + product);
