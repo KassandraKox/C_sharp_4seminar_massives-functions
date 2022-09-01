@@ -9,20 +9,10 @@ int last_digit;
 while (tmp > 0)
 {
     last_digit = tmp % 10;
-    //Console.WriteLine(last_digit);
-    // if (last_digit != 0)
-    //{
-        if (x % last_digit == 0)
+        if (last_digit != 0 && x % last_digit == 0)
         {
             count += last_digit;
-            //Console.WriteLine(count);
         }
-    //}
-    //else
-    //{
-        //continue;
-    //}
     tmp /= 10;
-    //Console.WriteLine(tmp);
 }
 Console.WriteLine(count);
