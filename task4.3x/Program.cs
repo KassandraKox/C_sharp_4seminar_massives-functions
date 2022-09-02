@@ -3,26 +3,41 @@
 //(Каждый эл-т массива должен быть сгенерирован случайно)
 Random rand = new Random();
 Console.WriteLine("Сколько интересных числе тебе показать? Введи число:");
-int n = Convert.ToInt32(Console.ReadLine()); // 
-int product = 1;
-int total = 0;
-int last_digit;
+int n = Convert.ToInt32(Console.ReadLine()); // число n
+int product = 1;  // произведение цифр
+int total = 0;  // сумма цифр
+int last_digit;  // последняя цифра числа
+int i = 0; // счетчик
+int y; // произведение / сумма
 
-// Console.WriteLine(x);
-int [] nums = new int [n];
+int [] nums = new int [n];  // создать массив на n- чисел
 
-int x = rand.Next(101);
-int tmp = x;
-while (x < 0)
+while (i < n)
 {
+    int x = rand.Next(101); // x - претендент на интересность, ограничен 0-100
+    //Console.WriteLine(x);
+    int tmp = x;  // временный x
+    while (tmp > 0)
+    {
     last_digit = tmp % 10;
-    if (last_digit != 0 && x % last_digit == 0)
-        {
-            count += last_digit;
-        }
+    //Console.WriteLine(last_digit);
+    total += last_digit;
+    //Console.WriteLine(total);
+    product *= last_digit;
+    //Console.WriteLine(product);
     tmp /= 10;
-    product *= A;
+    }
+    y = product / total;
+    if ( y == 0)
+        {
+           nums[i] = x; 
+        }
+    else
+    {
+        continue;
+    }
     i++;
 }
-if ()
-nums[i] = x
+Console.WriteLine(string.Join(",", nums)); // вывод массива
+
+
